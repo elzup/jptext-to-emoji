@@ -1,0 +1,61 @@
+{
+  "name": "TODO",
+  "version": "0.0.0",
+  "description": "TODO",
+  "access": "public",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "repository": "elzup/TODO",
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "deploy": "npm run build && yarn publish",
+    "lint": "eslint --ext .ts,.tsx",
+    "test": "yarn test:jest && yarn test:unimported",
+    "test:jest": "jest src",
+    "test:unimported": "unimported",
+    "test:cov": "jest src --coverage",
+    "test:badges": "yarn test:cov && istanbul-badges-readme",
+    "prepare": "husky install",
+    "depcruise": "depcruise --config .dependency-cruiser.js --include-only \"^src\" --output-type dot src | dot -T svg > dependencygraph.svg",
+    "release": "yarn build && yarn publish"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": [
+      "git add"
+    ]
+  },
+  "files": [
+    "lib"
+  ],
+  "keywords": [
+    "utils",
+    "personal"
+  ],
+  "devDependencies": {
+    "@elzup/tsconfig": "1.0.2",
+    "@swc/core": "1.2.220",
+    "@swc/jest": "0.2.22",
+    "@types/jest": "28.1.6",
+    "@types/node": "18.0.6",
+    "babel-jest": "28.1.3",
+    "eslint": "8.20.0",
+    "eslint-config-nzap": "6.0.1",
+    "husky": "8.0.1",
+    "jest": "28.1.3",
+    "lint-staged": "13.0.3",
+    "prettier": "2.7.1",
+    "ts-jest": "28.0.7",
+    "tsd": "0.22.0",
+    "typescript": "4.7.4",
+    "unimported": "1.21.0"
+  }
+}

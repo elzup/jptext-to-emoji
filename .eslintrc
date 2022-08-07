@@ -1,0 +1,4 @@
+{
+  "extends": ["nzap", "nzap/typescript", "nzap/jest"],
+  "rules": {}
+}
