@@ -18,12 +18,13 @@ $ npm install jptext-to-emoji
 ## Usage
 
 ```js
-const { hoge } = require('jptext-to-emoji')
+import { emojify } from 'jptext-to-emoji'
 
-/* tree shaking */
-// const { hoge } = require('elzup/jptext-to-emoji/lib/hoge')
+emojify('世界的に水が不足')
+// '🗺🎯に🚰が不足'
 
-hoge()
+emojify('扉を開ける')
+// '🚪を開ける'
 ```
 
 ## License
