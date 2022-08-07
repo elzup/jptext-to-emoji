@@ -1,5 +1,5 @@
-import { add } from '../index'
+import { emojify } from '../index'
 
-test('url', () => {
-  expect(add(1, 2)).toBe(3)
+test('emojify', async () => {
+  expect(await emojify('世界的に水が不足')).toBe('🗺🎯に🚰が不足')
 })

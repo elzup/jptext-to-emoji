@@ -1,11 +1,11 @@
-# TODO
+# jptext-to-emoji
 
-> TODO
+> jptext-to-emoji
 
 ## Install
 
 ```
-$ npm install TODO
+$ npm install jptext-to-emoji
 ```
 
 ## Doc
@@ -15,10 +15,10 @@ $ npm install TODO
 ## Usage
 
 ```js
-const { hoge } = require('TODO')
+const { hoge } = require('jptext-to-emoji')
 
 /* tree shaking */
-// const { hoge } = require('elzup/TODO/lib/hoge')
+// const { hoge } = require('elzup/jptext-to-emoji/lib/hoge')
 
 hoge()
 ```

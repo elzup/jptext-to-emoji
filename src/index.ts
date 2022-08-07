@@ -1,1 +1,1 @@
-export { add } from './unit'
+export { emojify } from './emojify'
