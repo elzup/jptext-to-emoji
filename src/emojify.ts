@@ -1,7 +1,8 @@
 import { readFileSync } from 'fs'
 
 import * as url from 'url'
-import { toHiragana } from 'jaco'
+import toHiragana from 'jaco/fn/toHiragana'
+
 import { tokenize } from 'kuromojin'
 
 const dirname = url.fileURLToPath(new URL('.', import.meta.url))
