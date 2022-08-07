@@ -2,3 +2,5 @@
 *.js text eol=lf
 *.lock binary
 package-lock.json binary
+
+src/resource/emoji.tsv binary

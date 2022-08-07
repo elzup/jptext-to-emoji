@@ -304,10 +304,10 @@
   dependencies:
     "@jridgewell/trace-mapping" "0.3.9"
 
-"@elzup/tsconfig@1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@elzup/tsconfig/-/tsconfig-1.0.2.tgz#b194a9adeb006b759963513e0ba6b8ffc95ea706"
-  integrity sha512-cmpALF/NVr+7MKogrChK0z0mIVDPSwBW2SE5ZhzxeMtop+QonfQ/8GuqB35d5Rgf+qbbH4Ta0CGgY6yS07kdug==
+"@elzup/tsconfig@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@elzup/tsconfig/-/tsconfig-1.1.0.tgz#dabce8d643c821b625f3567b79202a198b9e50aa"
+  integrity sha512-vnO8qq2Cia24qeRZ5taHlrP08xNVisPnA6Ow/WbPO2olhAgg7fkR5Xa5OLr+R9ZmOaWeuDYhjX7FRB3Y5XedKQ==
 
 "@eslint/eslintrc@^0.4.3":
   version "0.4.3"

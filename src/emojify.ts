@@ -1,21 +1,22 @@
 import { readFileSync } from 'fs'
 
-import toHiragana from 'jaco/fn/toHiragana'
+import * as url from 'url'
+import { toHiragana } from 'jaco'
 import { tokenize } from 'kuromojin'
 
-const emojiTsv = readFileSync('./data/emoji.tsv', 'utf8')
-const lines = emojiTsv.split('\n')
+const dirname = url.fileURLToPath(new URL('.', import.meta.url))
+
+const emojiTsv = readFileSync(dirname + './resource/emoji.tsv', 'utf8')
 const toHira = (text: string) => {
   return toHiragana(text)
 }
 
-const lib: Record<string, string> = {}
-
-lines.forEach((v) => {
-  const [k, emoji] = v.split('\t')
-
-  lib[k.substring(1)] = emoji
-})
+const lib = Object.fromEntries(
+  emojiTsv
+    .trim()
+    .split('\n')
+    .map((v) => v.split('\t'))
+)
 
 export const emojify = async (text: string) => {
   const tokens = await tokenize(text)
