@@ -1,1 +1,1 @@
-export { emojify } from './emojify'
+export { emojify } from './emojify.js'

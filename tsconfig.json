@@ -1,7 +1,8 @@
 {
-  "extends": "@elzup/tsconfig",
+  "extends": "@elzup/tsconfig/tsconfig.node.json",
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
+    "target": "esnext",
     "noUncheckedIndexedAccess": false,
     "noPropertyAccessFromIndexSignature": false,
     "outDir": "lib",

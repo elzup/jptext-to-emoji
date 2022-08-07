@@ -2,6 +2,9 @@
 
 > jptext-to-emoji
 
+以下を辞書として使用させていただいてます。  
+[peaceiris/emoji\-ime\-dictionary: 日本語で絵文字入力をするための IME 追加辞書 📙 Google 日本語入力などで日本語から絵文字への変換を可能にする IME 拡張辞書](https://github.com/peaceiris/emoji-ime-dictionary)
+
 ## Install
 
 ```
