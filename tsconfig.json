@@ -1,5 +1,5 @@
 {
-  "extends": "@elzup/tsconfig/tsconfig.node.json",
+  "extends": "@elzup/tsconfig",
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
