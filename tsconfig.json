@@ -2,11 +2,13 @@
   "extends": "@elzup/tsconfig",
   "compilerOptions": {
     "module": "esnext",
-    "target": "esnext",
+    "target": "es2016",
     "noUncheckedIndexedAccess": false,
     "noPropertyAccessFromIndexSignature": false,
+    "esModuleInterop": true,
     "outDir": "lib",
     "baseUrl": ".",
+    "strict": true,
     "paths": {
       "*": ["node_modules/*", "src/types/*"]
     }

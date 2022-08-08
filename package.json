@@ -1,6 +1,6 @@
 {
   "name": "jptext-to-emoji",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "jptext-to-emoji",
   "access": "public",
   "license": "MIT",
@@ -23,7 +23,7 @@
     "test:unimported": "unimported",
     "test:cov": "jest src --coverage",
     "test:badges": "yarn test:cov && istanbul-badges-readme",
-    "prepare": "husky install",
+    "prepare": "npm run build",
     "depcruise": "depcruise --config .dependency-cruiser.js --include-only \"^src\" --output-type dot src | dot -T svg > dependencygraph.svg",
     "release": "yarn build && yarn publish"
   },
@@ -66,5 +66,9 @@
   "dependencies": {
     "jaco": "4.0.0",
     "kuromojin": "3.0.0"
+  },
+  "exports": {
+    "import": "./lib/index.mjs",
+    "default": "./lib/index.js"
   }
 }
