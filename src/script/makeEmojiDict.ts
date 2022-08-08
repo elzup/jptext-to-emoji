@@ -11,8 +11,8 @@ lines.forEach((v) => {
   const k1 = k.substring(1)
   const k2 = keyPrepare(k1)
 
-  lib[k1] = emoji
-  if (!(k2 in lib)) lib[k2] = emoji
+  if (k1.length > 1) lib[k1] = emoji
+  if (k2.length > 1 && !(k2 in lib)) lib[k2] = emoji
 })
 
 console.log(
