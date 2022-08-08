@@ -66,9 +66,5 @@
   "dependencies": {
     "jaco": "4.0.0",
     "kuromojin": "3.0.0"
-  },
-  "exports": {
-    "import": "./lib/index.mjs",
-    "default": "./lib/index.js"
   }
 }
