@@ -1,5 +1,5 @@
 import { readFileSync } from 'fs'
-import { keyPrepare } from './util.js'
+import { keyPrepare } from './util'
 
 const emojiTsv = readFileSync('./data/emoji.tsv', 'utf8')
 const lines = emojiTsv.split('\n')
@@ -12,7 +12,7 @@ lines.forEach((v) => {
   const k2 = keyPrepare(k1)
 
   lib[k1] = emoji
-  if (!(k2 in lib)) lib[k2] = v
+  if (!(k2 in lib)) lib[k2] = emoji
 })
 
 console.log(
