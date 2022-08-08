@@ -24,6 +24,7 @@ export const emojify = async (
   const tokens = await tokenize(text)
 
   return tokens
+    .filter((v) => Boolean(v?.reading))
     .map((v) => {
       const reading = toHira(v.reading)
       const hit = lib[reading]
