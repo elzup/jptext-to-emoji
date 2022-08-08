@@ -1,9 +1,15 @@
 import { emojify } from '../index.js'
 import { keyPrepare } from '../script/util.js'
 
-test('emojify', async () => {
-  expect(await emojify('世界的に水が不足')).toBe('🗺🎯に🚰が不足')
-  expect(await emojify('扉を開ける')).toBe('🚪を開ける')
+describe('emojify', () => {
+  it('trans', async () => {
+    expect(await emojify('世界的に水が不足')).toBe('🗺🎯に🚰が不足')
+    expect(await emojify('扉を開ける')).toBe('🚪を開ける')
+  })
+
+  it('onlyEmoji', async () => {
+    expect(await emojify('扉を開ける', { onlyEmoji: true })).toBe('🚪')
+  })
 })
 
 test('keyPrepare', () => {

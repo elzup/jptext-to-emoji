@@ -17,7 +17,10 @@ const loadLib = () => {
 }
 const lib = loadLib()
 
-export const emojify = async (text: string) => {
+export const emojify = async (
+  text: string,
+  { onlyEmoji } = { onlyEmoji: false }
+) => {
   const tokens = await tokenize(text)
 
   return tokens
@@ -26,7 +29,7 @@ export const emojify = async (text: string) => {
       const hit = lib[reading]
 
       if (hit !== undefined) return hit
-      return v.surface_form
+      return onlyEmoji ? '' : v.surface_form
     })
     .join('')
 }
