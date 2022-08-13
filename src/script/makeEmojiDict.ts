@@ -1,22 +1,31 @@
-import { readFileSync } from 'fs'
+import { readFile } from 'fs/promises'
 import { keyPrepare } from './util'
 
-const emojiTsv = readFileSync('./data/emoji.tsv', 'utf8')
-const lines = emojiTsv.split('\n')
+const upsert = (dict: Record<string, string>, key: string, value: string) => {
+  if (key in dict) return
+  dict[key] = value
+}
 
-const lib: Record<string, string> = {}
+const main = async () => {
+  const emojiTsv = await readFile('./data/emoji.tsv', 'utf8')
+  const lines = emojiTsv.split('\n')
 
-lines.forEach((v) => {
-  const [k, emoji] = v.split('\t')
-  const k1 = k.substring(1)
-  const k2 = keyPrepare(k1)
+  const lib: Record<string, string> = {}
 
-  if (k1.length > 1) lib[k1] = emoji
-  if (k2.length > 1 && !(k2 in lib)) lib[k2] = emoji
-})
+  lines.forEach((v) => {
+    const [k, emoji] = v.split('\t')
+    const k1 = k.substring(1)
+    const k2 = keyPrepare(k1)
+    const keys = [k1, k2]
 
-console.log(
-  Object.entries(lib)
-    .map((kv) => kv.join('\t'))
-    .join('\n')
-)
+    keys.filter((v) => v.length > 0).forEach((v) => upsert(lib, v, emoji))
+  })
+
+  console.log(
+    Object.entries(lib)
+      .map((kv) => kv.join('\t'))
+      .join('\n')
+  )
+}
+
+main()

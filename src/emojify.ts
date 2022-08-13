@@ -8,13 +8,14 @@ const toHira = (text: string) => toHiragana(text)
 const loadLib = () => {
   const emojiTsv = readFileSync(__dirname + '/resource/emoji.tsv', 'utf8')
 
-  return Object.fromEntries(
-    emojiTsv
-      .trim()
-      .split('\n')
-      .map((v) => v.split('\t'))
-  )
+  const kvs = emojiTsv
+    .trim()
+    .split('\n')
+    .map((v) => v.split('\t'))
+
+  return Object.fromEntries(kvs)
 }
+
 const lib = loadLib()
 
 export const emojify = async (

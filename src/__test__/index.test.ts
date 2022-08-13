@@ -7,6 +7,10 @@ describe('emojify', () => {
     expect(await emojify('扉を開ける')).toBe('🚪を開ける')
   })
 
+  it('priority first', async () => {
+    expect(await emojify('電話をする')).toBe('☎をする')
+  })
+
   it('onlyEmoji', async () => {
     expect(await emojify('扉を開ける', { onlyEmoji: true })).toBe('🚪')
   })
