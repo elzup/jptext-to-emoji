@@ -13,7 +13,7 @@
   "scripts": {
     "gen-lib": "./setup.sh && ts-node ./src/script/makeEmojiDict.ts > src/resource/emoji.tsv",
     "ts-esm": "node --loader ts-node/esm",
-    "build": "yarn gen-lib && tsc --project tsconfig.build.json && yarn build:copy",
+    "build": "tsc --project tsconfig.build.json && yarn build:copy",
     "build:copy": "cp -r ./src/resource ./lib/",
     "deploy": "yarn build && yarn publish",
     "lint": "eslint --ext .ts,.tsx",
