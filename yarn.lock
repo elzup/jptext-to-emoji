@@ -4144,10 +4144,10 @@ signal-exit@^3.0.2, signal-exit@^3.0.3, signal-exit@^3.0.7:
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.7.tgz#a9a1767f8af84155114eaabd73f99273c8f59ad9"
   integrity sha512-wnD2ZE+l+SPC/uoS0vXeE9L1+0wuaMqKlfz9AMUo38JsyLSBWSFcHR1Rri62LZc12vLr1gb3jl7iwQhgwpAbGQ==
 
-simple-git@^3.7.1:
-  version "3.14.1"
-  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-3.14.1.tgz#68018a5f168f8a568862e30b692004b37c3b5ced"
-  integrity sha512-1ThF4PamK9wBORVGMK9HK5si4zoGS2GpRO7tkAFObA4FZv6dKaCVHLQT+8zlgiBm6K2h+wEU9yOaFCu/SR3OyA==
+simple-git@^3.18.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/simple-git/-/simple-git-3.19.0.tgz#fe8d0cd86a0e68372b75c0c44a0cb887201c3f7d"
+  integrity sha512-hyH2p9Ptxjf/xPuL7HfXbpYt9gKhC1yWDh3KYIAYJJePAKV7AEjLN4xhp7lozOdNiaJ9jlVvAbBymVlcS2jRiA==
   dependencies:
     "@kwsites/file-exists" "^1.1.1"
     "@kwsites/promise-deferred" "^1.1.1"
@@ -4593,10 +4593,10 @@ unbox-primitive@^1.0.2:
     has-symbols "^1.0.3"
     which-boxed-primitive "^1.0.2"
 
-unimported@1.27.1:
-  version "1.27.1"
-  resolved "https://registry.yarnpkg.com/unimported/-/unimported-1.27.1.tgz#3ef7970578a69584e7aabfe9d4c81fd530a011f9"
-  integrity sha512-2qahkDZxuOucHhz6mYo0Htfg/QqcLCoE/j3w9NRwv4s2obhYU7kLxBcD19lEmtZnwE/48ynOzh8wZdUj/edAhw==
+unimported@1.29.1:
+  version "1.29.1"
+  resolved "https://registry.yarnpkg.com/unimported/-/unimported-1.29.1.tgz#4977b1ea3e81d74748a0409de8f8eb058abb2ca0"
+  integrity sha512-HEQ+hJS8n3+Gwy3lQbXn1Bvkb+wHtBQbUJ8/sGcwHzcvyE8hvYQdl5SUNx/afFG1YR2D/XvqHXYZ8ak+F9lJDg==
   dependencies:
     "@typescript-eslint/parser" "^5.27.1"
     "@typescript-eslint/typescript-estree" "^5.27.1"
@@ -4609,7 +4609,7 @@ unimported@1.27.1:
     ora "^5.3.0"
     read-pkg-up "^7.0.1"
     resolve "^1.20.0"
-    simple-git "^3.7.1"
+    simple-git "^3.18.0"
     term-size "^2.2.1"
     typescript "^4.3.5"
     yargs "^16.2.0"
