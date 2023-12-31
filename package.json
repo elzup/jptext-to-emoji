@@ -57,9 +57,9 @@
     "lint-staged": "13.3.0",
     "prettier": "2.8.8",
     "ts-jest": "29.1.1",
-    "ts-node": "10.9.1",
-    "tsd": "0.29.0",
-    "typescript": "5.3.2",
+    "ts-node": "10.9.2",
+    "tsd": "0.30.1",
+    "typescript": "5.3.3",
     "unimported": "1.31.1"
   },
   "dependencies": {
