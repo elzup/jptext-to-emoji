@@ -58,8 +58,8 @@
     "prettier": "2.8.8",
     "ts-jest": "29.1.2",
     "ts-node": "10.9.2",
-    "tsd": "0.30.7",
-    "typescript": "5.3.3",
+    "tsd": "0.31.0",
+    "typescript": "5.4.3",
     "unimported": "1.31.1"
   },
   "dependencies": {
