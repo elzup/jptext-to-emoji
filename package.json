@@ -59,7 +59,7 @@
     "ts-jest": "29.1.2",
     "ts-node": "10.9.2",
     "tsd": "0.31.0",
-    "typescript": "5.4.3",
+    "typescript": "5.4.5",
     "unimported": "1.31.1"
   },
   "dependencies": {
